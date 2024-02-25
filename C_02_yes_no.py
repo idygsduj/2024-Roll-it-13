@@ -8,8 +8,11 @@ def yes_no(question):
         elif response == "no" or response == "n":
             return "no"
         else:
-            print("you did not choose a valid response")
+            print("You did not choose a valid response")
 
 
 # main routine
-want_instructions = yes_no("do you want to read the instructions?")
+while True:
+    want_instructions = yes_no("Do you want to read the instructions?")
+    print(f"You chose {want_instructions}")
+
