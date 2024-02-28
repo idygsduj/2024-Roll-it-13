@@ -8,7 +8,7 @@ def yes_no(question):
         elif response == "no" or response == "n":
             return "no"
         else:
-            print("You did not choose a valid response")
+            print("Please enter yes / no")
 
 
 # main routine
