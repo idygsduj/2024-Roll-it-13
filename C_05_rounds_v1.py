@@ -1,13 +1,15 @@
 import random
 
 
-# generates an integer between 0 and 6 to simulate a roll of a die
+# generates an integer between 0 and 6
+# to simulate a roll of a die
 def roll_die():
     result = random.randint(1, 6)
     return result
 
 
-# rolls two dice and returns total and whether we had a double roll
+# rolls two dice and returns total and whether we
+# had a double roll
 def two_rolls():
     double_score = "no"
 
@@ -53,11 +55,11 @@ computer_points = computer_first[0]
 
 print(f"The computer rolled a total of {computer_points}.")
 
-
 # Loop (while both user / computer have <= 13 points)...
 while computer_points < 13 and user_points < 13:
 
-    # ask user if they want to roll again, update points / status
+    # ask user if they want to roll again, update
+    # points / status
 
     print()
     roll_again = input("Do you want to roll the dice (type 'no' to pass: ")
@@ -69,31 +71,30 @@ while computer_points < 13 and user_points < 13:
     print("\nPress <enter> to continue...")
     input()
 
-# roll die for computer and update computer points
-computer_move = roll_die()
-computer_points += computer_move
-print(f"The computer rolled a {computer_move}.  The computer "
-      f"now has {computer_points}.")
+    # roll die for computer and update computer points
+    computer_move = roll_die()
+    computer_points += computer_move
+    print(f"The computer rolled a {computer_move}.  The computer "
+          f"now has {computer_points}.")
 
-print()
-if user_points > computer_points:
-    result = "You are ahead."
-else:
-    result = "The computer is ahead!"
+    print()
+    if user_points > computer_points:
+        result = "You are ahead."
+    else:
+        result = "The computer is ahead!"
 
-print(f"***Round Update****: {result} ")
-print(f"User Score: {user_points} \t | \t Computer Score: {computer_points}")
+    print(f"***Round Update****: {result} ")
+    print(f"User Score: {user_points} \t | \t Computer Score: {computer_points}")
 
-# outside loop - double user points if they won and are eligible
+    # outside loop - double user points if they won and are eligible
 
-# show rounds result
-if user_points < computer_points:
-    print("Sorry - you lost this round and no points "
-          "have been added to your total score. The computer's score has "
-          f"increased by {computer_points} points.")
+    # show rounds result
+    if user_points < computer_points:
+        print("Sorry - you lost this round and no points "
+              "have been added to your total score. The computer's score has "
+              f"increased by {computer_points} points.")
 
-# currently does not include double points!
-else:
-    print(f"Yay! you won the round and {user_points} points have "
-          f"been added to your score")
-
+    # currently does not include double points!
+    else:
+        print(f"Yay! you won the round and {user_points} points have "
+              f"been added to your score")
